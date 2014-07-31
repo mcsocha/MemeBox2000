@@ -1,0 +1,16 @@
+﻿
+
+
+<p>
+    @Html.ActionLink("View Gallery", "Index") |
+    @Html.ActionLink("Submit Meme", "Submit")
+    @using(Html.BeginForm("Index", "Gallery", FormMethod.Get, new { id = "form" }))
+    {
+        <p>
+            Filter by genre:
+            <input id="genreTextbox" name="genreFilter" type="text"/>
+            <input id="genreSubmit" type="submit" value="Filter Genre" /><br />
+            This above button will show all memes whose genre text boxes match what you type in here above:
+        </p>
+    }
+</p>

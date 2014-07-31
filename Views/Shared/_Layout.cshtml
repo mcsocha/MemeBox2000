@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- CHANGE THIS TITLE TAG -->
+<title>@ViewBag.Title - MemeBox2000</title>
+
+<!-- media-queries.js -->
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<!-- html5.js -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<link href="@Url.Content("~/Content/font/stylesheet.css")" rel="stylesheet" type="text/css" />	
+<link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/bootstrap-responsive.min.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/styles.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/media-queries.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/fancybox/jquery.fancybox-1.3.4.css")" rel="stylesheet" type="text/css"  media="screen" />
+
+<meta name="viewport" content="width=device-width" />
+ 
+<link href="@Url.Content("~/Content/img/favicon.ico")" rel="shortcut icon"  type="image/x-icon">
+
+<link href='http://fonts.googleapis.com/css?family=Exo:400,800' rel='stylesheet' type='text/css'>
+
+</head>
+<body data-spy="scroll">
+
+@Html.Partial("_Nav")
+
+<!-- MAIN CONTENT -->
+<div class="container content container-fluid" id="home">
+@RenderBody()
+</div>
+
+@Html.Partial("_Footer")
+
+<script src="@Url.Content("~/Scripts/jquery-2.1.1.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap-collapse.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap-scrollspy.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.mousewheel-3.0.4.pack.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.easing-1.3.pack.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.fancybox-1.3.4.pack.js")"></script>
+<script src="@Url.Content("~/Scripts/init.js")"></script>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")"></script>
+
+<script src="@Url.Content("~/Scripts/main.js")"></script>
+
+</body>
+</html>

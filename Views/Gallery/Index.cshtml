@@ -1,0 +1,32 @@
+﻿@using MemeBox2000
+@using MemeBox2000.Models
+
+@model List<Meme>
+
+@{
+    ViewBag.Title = "Gallery";
+}
+
+@Html.Partial("_GalleryNav")
+
+    <!-- GALLERY -->
+	<div class="row-fluid" id="screenshots">
+
+		<h2 class="page-title" id="scroll_up">Gallery</h2>
+		
+        @{
+            int i = 0;
+            foreach(Meme meme in Model)
+            {
+
+            <!--<ul class="thumbnails">-->
+			    <li class="span3">
+                    <a href="@Url.Content("~/Gallery/Detail/" + meme.ID)" rel="gallery", class="thumbnail">
+				        <img src="@Url.Content("~/Content/uploads/" + meme.ID + meme.FileExtension)" alt="@meme.Description"/>
+                    </a>
+                </li>			
+            <!--</ul>-->
+            
+            }
+        }
+	</div>

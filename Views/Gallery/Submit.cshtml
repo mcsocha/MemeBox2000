@@ -1,0 +1,32 @@
+﻿@using MemeBox2000.Models
+
+@model Meme
+
+@{
+    ViewBag.Title = "Submit Meme";
+}
+
+@Html.Partial("_GalleryNav")
+
+<h2>Submit<br /></h2>
+
+@using (Html.BeginForm("Submit", "Gallery", FormMethod.Post, new { id = "form", enctype = "multipart/form-data" }))
+{
+    <p>@ViewBag.Message</p>
+    
+    @Html.ValidationSummary()    
+    <br />
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title)<br />
+    <br />
+    @Html.LabelFor(m => m.Description)
+    @Html.TextBoxFor(m => m.Description)<br />
+    <br />
+    @Html.LabelFor(m => m.Genre)
+    @Html.TextBoxFor(m => m.Genre)<br />
+    
+    @Html.Label("File Upload")
+    <input type="file" name="file" id="file" type = "file", accept=".jpg,.gif,.jpeg,.png,.bmp,.webm,.webp" /><br />
+    <br />
+    <input type="submit" value="Submit" />
+}
